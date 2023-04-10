@@ -1,6 +1,7 @@
 import React from 'react';
 
 let ProductDescription = ({currentProduct}) => {
+  console.log(currentProduct)
   return (
 <div className="flex w-[1150px]" title='product-description'>
   <div className="grid h-20 flex-1 card rounded-box place-items-center w-[30%]">

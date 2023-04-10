@@ -39,7 +39,7 @@ function App() {
         <Banner setTheme={setTheme} theme={theme} cartItems={cartItems}/>
         <div className='mx-auto w-11/12 overflow-auto'>
           <div onClick={handleOverviewClick}>
-            <Overview setCartItems={setCartItems}/>
+            {/*<Overview setCartItems={setCartItems}/> */}
           </div>
           <div onClick={handleQuestionsAnswersClick}>
             <QuestionsAnswers />
