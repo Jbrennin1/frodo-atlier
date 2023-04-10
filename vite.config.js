@@ -19,7 +19,7 @@ export default defineConfig({
     host: true,
     proxy: {
       "/api" : {
-        target: `http://localhost:${process.env.PORT}`,
+        target: 'http://ec2-3-22-222-184.us-east-2.compute.amazonaws.com:3000',
         changeOrigin: true,
         secure: false,
         rewrite: ( path ) => path.replace(/^\/api/, '')
@@ -27,3 +27,4 @@ export default defineConfig({
     }
   }
 })
+
