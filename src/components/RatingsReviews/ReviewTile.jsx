@@ -42,14 +42,19 @@ export default function ReviewTile({ review, setPhoto }) {
     .then(res => setReport(res.data))
     .catch(err => console.log(err.data))
   }
+  console.log(review)
 
+   if(review.photos[0] === null) {
+    console.log('nulllll')
+     review.photos = [{url: ''}]
+   }
   return (
     <div className="border-b-2 border-l-2" title="review-tile">
       <div className="flex justify-between px-5 pt-5">
         <div>
           <StarsWidget rating={review.rating} />
         </div>
-        <div>{review.reviewer_name}, {format(Date.parse(review.date), 'MMMM d, yyyy')}</div>
+        <div>{review.reviewer_name}, {review.date}</div>
       </div>
       <div className="px-5 py-5 font-bold text-2xl">{review.summary}</div>
       <div className="px-5 pb-5">
@@ -74,7 +79,8 @@ export default function ReviewTile({ review, setPhoto }) {
       </div>
       <div>
         {review.photos.length > 0 && <div className="pb-5 px-5 carousel">
-          {review.photos.map(photo => <CarouselPhoto src={photo.url} setPhoto={setPhoto} key={photo.id} setDelButton={() => {}}/>)}
+          {review.photos.map(photo => {
+          return (<CarouselPhoto src={photo.url} setPhoto={setPhoto} key={photo.id} setDelButton={() => {}}/>)})}
         </div>}
       </div>
       <div className="px-5 pb-5">

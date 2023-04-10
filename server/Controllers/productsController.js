@@ -7,7 +7,7 @@ let productsController = {
       res.send(data)
     })
     .catch((err) => {
-      console.log('ERROR ON FETCHING PRODUCTS SERVER: ', err.data)
+      console.log('ERROR ON FETCHING PRODUCTS SERVER: ', err)
     })
   },
 

@@ -8,6 +8,7 @@ reviewController = {
     }
     Models.reviews.getReviews(params)
       .then(response => {
+        console.log('res', response.data)
         res.send(response.data)
       })
       .catch(err => {

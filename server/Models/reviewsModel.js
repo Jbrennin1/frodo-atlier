@@ -3,7 +3,7 @@ const config = require('../../config.js');
 const path = require('path');
 
 let reviewsModel = {
-  url: 'https://app-hrsei-api.herokuapp.com/api/fec2/hr-rfe/reviews',
+  url: 'http://localhost:3001/reviews',
   headers: { 'Authorization' : config.TOKEN},
   getReviews: ( params ) => {
     const options = {
@@ -26,7 +26,7 @@ let reviewsModel = {
   },
   getMeta: ( params ) => {
     const options = {
-      url: path.join(reviewsModel.url, '/meta'),
+      url: path.join('http://localhost:3005/reviews', '/meta'),
       headers: reviewsModel.headers,
       params: params
       //should be an object with a product_id key

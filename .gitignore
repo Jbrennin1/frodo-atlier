@@ -106,6 +106,7 @@ dist
 # config
 config.js
 package.json
+package-lock.json
 *.cer
 
 # vite config

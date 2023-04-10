@@ -33,6 +33,7 @@
     "mongoose": "^7.0.2",
     "morgan": "^1.10.0",
     "path": "^0.12.7",
+    "pg": "^8.10.0",
     "react": "^18.2.0",
     "react-cursor-position": "^3.0.3",
     "react-dom": "^18.2.0",
