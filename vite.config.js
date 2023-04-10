@@ -16,7 +16,7 @@ export default defineConfig({
     setupFiles: './spec/setup.js'
   },
   server: {
-    host: true,
+    host: 0.0.0.0,
     proxy: {
       "/api" : {
         target: `http://localhost:${process.env.PORT}`,
