@@ -7,7 +7,7 @@
   "scripts": {
     "start": "concurrently 'npm:preview' 'npm:server-dev'",
     "react-dev": "vite",
-    "server-dev": "server/index.js",
+    "server-dev": "node server/index.js",
     "dev": "concurrently 'npm:react-dev' 'npm:server-dev'",
     "build": "vite build",
     "preview": "vite preview",
