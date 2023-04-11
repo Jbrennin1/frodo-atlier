@@ -55,10 +55,5 @@ router.get('/reviews/meta', async (req, res) => {
   }
 })
 
-router.get('/loaderio-7091b22c4c1d87810600486a8e3aba56.txt', (req, res) => {
-  res.sendFile(__dirname + '/../loaderio-7091b22c4c1d87810600486a8e3aba56.txt');
-});
-
-router.get
 
 module.exports = router;
