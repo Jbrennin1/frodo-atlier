@@ -1,6 +1,7 @@
 const controller = require('./Controllers/controllers.js');
 const router = require('express').Router();
 const {getReviews, getReviewsMeta} = require('./Models/reviewQuery')
+var path = require('path');
 
 //questions
 router.get('/questions', controller.questions.getQuestions);
@@ -56,8 +57,9 @@ router.get('/reviews/meta', async (req, res) => {
 })
 
 router.get('/loaderio-7091b22c4c1d87810600486a8e3aba56.txt', (req, res) => {
-  res.sendFile('../loaderio-7091b22c4c1d87810600486a8e3aba56.txt', { root: '/' });
+  res.sendFile(path.resolve(__dirname+'../loaderio-7091b22c4c1d87810600486a8e3aba56.txt'));
 });
 
 
 module.exports = router;
+
